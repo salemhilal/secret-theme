@@ -22,8 +22,8 @@ function secretmagazine_body_classes( $classes ) {
 		$classes[] = 'no-sidebar';
 	}
 
-	$classes[] = 'sans-serif';
-	$classes[] = 'black-70';
+	$classes[] = 'black-90';
+	$classes[] = 'courier';
 
 	return $classes;
 }

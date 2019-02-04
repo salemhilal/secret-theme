@@ -21,43 +21,44 @@ get_header();
 		<?php
 		if ( have_posts() ) :
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
+			if ( is_home() && ! is_front_page() ) : ?>
 				<header>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
-				<?php
-			endif;
+			<?php endif; ?>
+			<div class="column-count-3 f5">
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post(); ?>
-				
-				<div class="fl w-third">
-					<a href="<?php the_permalink() ?>">
-						<?php the_title(); ?>
-					</a>
-				</div>
+				<?php while ( have_posts() ) : the_post();
+					/* the Loop™ */ ?>
+					
+					<div class="">
+						<?php if (has_post_thumbnail()) : ?>
+							<div>	
+								<?php the_post_thumbnail(); ?>
+							</div>
+						<?php endif; ?>
+						<a href="<?php the_permalink() ?>" class="db pb2 black-90 link lh-title bg-animate hover-bg-light-blue">
+							<?php the_title(); ?>
+						</a>
+					</div>
 
-				<?php
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * TODO: Put images here only if there's a featured image.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				// get_template_part( 'template-parts/content', get_post_type() );
+					<?php
+					/*
+					* Include the Post-Type-specific template for the content.
+					* TODO: Put images here only if there's a featured image.
+					* If you want to override this in a child theme, then include a file
+					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+					*/
+					// get_template_part( 'template-parts/content', get_post_type() );
 
-			endwhile;
+				endwhile; ?>
+			</div>
 
-			the_posts_navigation();
+			<?php the_posts_navigation(); ?>
 
-		else :
-
+		<?php else :
 			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
+		endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
