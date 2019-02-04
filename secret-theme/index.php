@@ -31,14 +31,22 @@ get_header();
 
 			/* Start the Loop */
 			while ( have_posts() ) :
-				the_post();
+				the_post(); ?>
+				
+				<div class="fl w-third">
+					<a href="<?php the_permalink() ?>">
+						<?php the_title(); ?>
+					</a>
+				</div>
 
+				<?php
 				/*
 				 * Include the Post-Type-specific template for the content.
+				 * TODO: Put images here only if there's a featured image.
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+				// get_template_part( 'template-parts/content', get_post_type() );
 
 			endwhile;
 
