@@ -37,7 +37,7 @@ get_header();
 								<?php the_post_thumbnail(); ?>
 							</div>
 						<?php endif; ?>
-						<a href="<?php the_permalink() ?>" class="db pb2 black-90 link lh-title bg-animate hover-bg-light-blue">
+						<a href="<?php the_permalink() ?>" class="db pb2 black-90 link lh-title break-word bg-animate hover-bg-light-blue">
 							<?php the_title(); ?>
 						</a>
 					</div>

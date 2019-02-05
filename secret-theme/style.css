@@ -649,6 +649,7 @@ a:hover, a:active {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+	text-align: left;
 }
 
 .main-navigation ul ul {
@@ -680,7 +681,7 @@ a:hover, a:active {
 }
 
 .main-navigation li {
-	float: left;
+	display: inline-block;
 	position: relative;
 }
 
@@ -991,4 +992,23 @@ object {
 .column-count-3 {
 	column-count: 3;
 	column-width: 200px; /* arbitrarily chosen */
+	column-gap: 30px;
+}
+
+.break-word {
+	overflow-wrap: break-word;
+}
+
+/*--------------------------------------------------------------
+# Specific tweaks
+--------------------------------------------------------------*/
+.custom-logo {
+	max-width: 300px;
+}
+
+#primary-menu .nav-menu {
+	text-align: center;
+}
+#primary-menu .page_item {
+	display: inline-block;
 }

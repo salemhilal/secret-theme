@@ -24,35 +24,38 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'secretmagazine' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
+	<header id="masthead" class="site-header mt4 center mw9">
+		<div class="site-branding tc">
 			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
+
+			// If there's no logo there, display the name of the blog instead.
+			if (has_custom_logo()) {
+				the_custom_logo();
+			} else {
+				if (is_front_page() && is_home()) : ?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php else : ?>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<?php endif;
+			}
+				
 			$secretmagazine_description = get_bloginfo( 'description', 'display' );
-			if ( $secretmagazine_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $secretmagazine_description; /* WPCS: xss ok. */ ?></p>
+			if ($secretmagazine_description || is_customize_preview()) : ?>
+				<p class="site-description">
+					<?php echo $secretmagazine_description; /* WPCS: xss ok. */ ?>
+				</p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'secretmagazine' ); ?></button>
 			<?php
-			wp_nav_menu( array(
+			wp_nav_menu([
 				'theme_location' => 'menu-1',
 				'menu_id'        => 'primary-menu',
-			) );
+			]);
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content m9 ma5">
+	<div id="content" class="site-content center mw9 pa3 pa4-m pa5-l">
