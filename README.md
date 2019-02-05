@@ -5,4 +5,6 @@ Make sure you have docker and docker-compose installed, and start the container 
 docker-compose up -d`
 ````
 
+A vanilla copy of wordpress should be hosted at `localhost:8000`. 
 
+You’ll need to upload post content. [WPTest](http://wptest.io/) has a bunch of good test data.
