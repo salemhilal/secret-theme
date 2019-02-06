@@ -26,7 +26,7 @@ get_header();
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
 			<?php endif; ?>
-			<div class="column-count-3 f5">
+			<div class="column-count-3 f5 fw5">
 
 				<?php while ( have_posts() ) : the_post();
 					/* the Loop™ */ ?>

@@ -390,6 +390,30 @@ template {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
+@font-face {
+    font-family: 'Akzidenz Grotesk BE';
+    src: local('Akzidenz Grotesk BE Regular Regular'), local('AkzidenzGroteskBE-Regular'),
+        url('fonts/AkzidenzGroteskBE-Regular.woff2') format('woff2'),
+        url('fonts/AkzidenzGroteskBE-Regular.woff') format('woff'),
+        url('fonts/AkzidenzGroteskBE-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akzidenz Grotesk BE';
+    src: local('AkzidenzGroteskBE-Md'),
+        url('fonts/AkzidenzGroteskBE-Md.woff2') format('woff2'),
+        url('fonts/AkzidenzGroteskBE-Md.woff') format('woff'),
+        url('fonts/AkzidenzGroteskBE-Md.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+.akzidenz {
+	font-family: 'Akzidenz Grotesk BE', 'helvetica neue', helvetica, sans-serif;
+}
+
 body,
 button,
 input,

@@ -23,7 +23,7 @@ function secretmagazine_body_classes( $classes ) {
 	}
 
 	$classes[] = 'black-90';
-	$classes[] = 'courier';
+	$classes[] = 'akzidenz';
 
 	return $classes;
 }
