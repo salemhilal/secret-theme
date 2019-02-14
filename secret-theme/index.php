@@ -33,7 +33,7 @@ get_header();
 					
 					<div class="">
 						<?php if (has_post_thumbnail()) : ?>
-							<div>	
+							<div class="post-thumbnail" style="margin:30px; overflow:hidden; border:3px solid black; padding-top:66%; position:relative;">	
 								<?php the_post_thumbnail(); ?>
 							</div>
 						<?php endif; ?>
