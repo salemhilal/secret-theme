@@ -28,10 +28,12 @@ get_header();
 			<?php endif; ?>
 			<div class="mw9 center ph3-ns">
 				<div class="cf ph2-ns">
-
-					<?php while ( have_posts() ) : the_post();
+					<div class="fl w-100">
+						<?php while ( have_posts() ) : the_post();
 						/* the Loop™ */ ?>
-						
+						<?php if ($wp_query->current_post % 3 === 0 && $wp_query->current_post !== 0) {
+							?></div><div class="fl w-100">
+						<?php } ?>
 						<div class="fl w-100 w-third-ns pa3">
 							<div class="bg-white pv4">
 								<?php if (has_post_thumbnail()) : ?>
@@ -55,6 +57,7 @@ get_header();
 						// get_template_part( 'template-parts/content', get_post_type() );
 
 					endwhile; ?>
+					</div>
 				</div>
 			</div>
 
