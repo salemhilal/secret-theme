@@ -26,32 +26,36 @@ get_header();
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
 			<?php endif; ?>
-			<div class="column-count-3 f5 fw5">
+			<div class="mw9 center ph3-ns">
+				<div class="cf ph2-ns">
 
-				<?php while ( have_posts() ) : the_post();
-					/* the Loop™ */ ?>
-					
-					<div class="post-homepage">
-						<?php if (has_post_thumbnail()) : ?>
-							<div class="post-thumbnail" style="margin:30px; overflow:hidden; border:3px solid black; padding-top:66%; position:relative;">	
-								<?php the_post_thumbnail(); ?>
+					<?php while ( have_posts() ) : the_post();
+						/* the Loop™ */ ?>
+						
+						<div class="fl w-100 w-third-ns pa3">
+							<div class="bg-white pv4">
+								<?php if (has_post_thumbnail()) : ?>
+									<div class="secret-post-thumbnail ba bw2 b--near-black">	
+										<?php the_post_thumbnail(); ?>
+									</div>
+								<?php endif; ?>
+								<a href="<?php the_permalink() ?>" class="db pb2 black-90 link lh-title break-word bg-animate hover-bg-light-blue">
+									<?php the_title(); ?>
+								</a>
 							</div>
-						<?php endif; ?>
-						<a href="<?php the_permalink() ?>" class="db pb2 black-90 link lh-title break-word bg-animate hover-bg-light-blue">
-							<?php the_title(); ?>
-						</a>
-					</div>
+						</div>
 
-					<?php
-					/*
-					* Include the Post-Type-specific template for the content.
-					* TODO: Put images here only if there's a featured image.
-					* If you want to override this in a child theme, then include a file
-					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
-					*/
-					// get_template_part( 'template-parts/content', get_post_type() );
+						<?php
+						/*
+						* Include the Post-Type-specific template for the content.
+						* TODO: Put images here only if there's a featured image.
+						* If you want to override this in a child theme, then include a file
+						* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+						*/
+						// get_template_part( 'template-parts/content', get_post_type() );
 
-				endwhile; ?>
+					endwhile; ?>
+				</div>
 			</div>
 
 			<?php the_posts_navigation(); ?>

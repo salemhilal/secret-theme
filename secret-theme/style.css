@@ -1037,14 +1037,6 @@ object {
 	display: inline-block;
 }
 
-.post-homepage .post-thumbnail img {
-	position: absolute;
-	top: 0;
-	left: 0;
-
-	/* 	we can either have images that are too small distort to fill
-		their frames, or we can have them not fill their frames. the 
-		two lines below do the former; kill them to do the latter. */
-	min-width: 100%;
-	min-height: 100%;
+.secret-post-thumbnail img {
+	display: block;
 }
