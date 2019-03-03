@@ -1040,3 +1040,12 @@ object {
 .secret-post-thumbnail img {
 	display: block;
 }
+
+.hover-bg-secret-orange:hover,
+.hover-bg-secret-orange:focus {
+	background-color: rgb(232, 98, 38)
+}
+
+.link:visited {
+	color: inherit;
+}
