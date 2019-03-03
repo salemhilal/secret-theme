@@ -34,14 +34,14 @@ get_header();
 						<?php if ($wp_query->current_post % 3 === 0 && $wp_query->current_post !== 0) {
 							?></div><div class="fl w-100">
 						<?php } ?>
-						<div class="fl w-100 w-third-ns pa3">
-							<div class="bg-white pv4">
+						<div class="fl w-100 w-third-ns pa2">
+							<div class="bg-white pv2">
 								<?php if (has_post_thumbnail()) : ?>
 									<div class="secret-post-thumbnail ba bw2 b--near-black">	
 										<?php the_post_thumbnail(); ?>
 									</div>
 								<?php endif; ?>
-								<a href="<?php the_permalink() ?>" class="db pb2 black-90 link lh-title break-word bg-animate hover-bg-light-blue">
+								<a href="<?php the_permalink() ?>" class="db pb2 black-90 link lh-title tc ttu fw5 pt3 break-word bg-animate hover-bg-light-blue">
 									<?php the_title(); ?>
 								</a>
 							</div>
