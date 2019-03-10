@@ -35,14 +35,16 @@ get_header();
 							?></div><div class="fl w-100">
 						<?php } ?>
 						<div class="fl w-100 w-third-ns pa2">
-							<div class="bg-white pv2">
-								<?php if (has_post_thumbnail()) : ?>
-									<div class="secret-post-thumbnail ba bw1 b--near-black">	
-										<?php the_post_thumbnail(); ?>
+							<div class="pb2">
+								<a href="<?php the_permalink() ?>" class="no-underline db pb2 black-90 no-visited-color lh-title tc ttu fw5 break-word bg-animate hover-bg-secret-orange hover-black">
+									<?php if (has_post_thumbnail()) : ?>
+										<div class="secret-post-thumbnail ba bw1 b--near-black mb3">	
+											<?php the_post_thumbnail(); ?>
+										</div>
+									<?php endif; ?>
+									<div class="ph2 pb2">
+										<?php the_title(); ?>
 									</div>
-								<?php endif; ?>
-								<a href="<?php the_permalink() ?>" class="db pb2 black-90 link lh-title tc ttu fw5 pt3 break-word bg-animate hover-bg-secret-orange hover-black">
-									<?php the_title(); ?>
 								</a>
 							</div>
 						</div>

@@ -12,7 +12,11 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
-<head>
+<!-- 
+	SECRET MAGAZINE
+	Theme by Salem Hilal (salem.io)
+-->
+<head>	
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
@@ -24,7 +28,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'secretmagazine' ); ?></a>
 
-	<header id="masthead" class="site-header mt4 center mw9">
+	<header id="masthead" class="site-header mt4 center mw8">
 		<div class="site-branding tc">
 			<?php
 
@@ -47,15 +51,6 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'secretmagazine' ); ?></button>
-			<?php
-			wp_nav_menu([
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			]);
-			?>
-		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content center mw9 pa3 pa4-m pa5-l">
+	<div id="content" class="site-content center mw8 pa3 pa4-m pa5-l">

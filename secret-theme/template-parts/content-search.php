@@ -16,8 +16,8 @@
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php
-			secretmagazine_posted_on();
 			secretmagazine_posted_by();
+			secretmagazine_posted_on();
 			?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>

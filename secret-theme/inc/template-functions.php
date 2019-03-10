@@ -1,6 +1,6 @@
 <?php
 /**
- * Functions which enhance the theme by hooking into WordPress
+ * Functions which enhance the theme jj26j hooking into WordPress
  *
  * @package secretmagazine
  */
@@ -24,6 +24,9 @@ function secretmagazine_body_classes( $classes ) {
 
 	$classes[] = 'black-90';
 	$classes[] = 'akzidenz';
+	$classes[] = 'f4';
+	$classes[] = 'lh-copy';
+	$classes[] = 'brand-bg';
 
 	return $classes;
 }

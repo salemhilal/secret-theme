@@ -1024,10 +1024,14 @@ object {
 }
 
 /*--------------------------------------------------------------
-# Specific tweaks
+# Specific tweaks for content we can't easily add classes to
 --------------------------------------------------------------*/
 .custom-logo {
 	max-width: 300px;
+}
+
+.brand-bg {
+	background-color: #F6FAEF;
 }
 
 #primary-menu .nav-menu {
@@ -1046,6 +1050,24 @@ object {
 	background-color: rgb(232, 98, 38)
 }
 
-.link:visited {
+a:visited {
 	color: inherit;
+}
+
+
+.entry-content p { 
+	max-width:34em;
+}
+
+.entry-content .wp-block-image {
+	/* clearfix */
+	overflow: auto;
+}
+
+.entry-content .wp-block-image figure {
+	border: .125rem solid #111;
+}
+
+.entry-content .wp-block-image img {
+	display: block;
 }

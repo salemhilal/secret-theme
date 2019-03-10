@@ -43,6 +43,14 @@ if ( ! function_exists( 'secretmagazine_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 		set_post_thumbnail_size( 550, 400 ); // this size or higher should be safe
 
+		if (class_exists('MultiPostThumbnails')) {
+			new MultiPostThumbnails([
+				'label' => __('Post header image'),
+				'id' => 'post-header-image',
+				'post_type' => 'post',
+			]);
+		}
+
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'secretmagazine' ),

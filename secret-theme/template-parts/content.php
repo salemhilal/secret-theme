@@ -11,10 +11,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php secretmagazine_post_thumbnail(); ?>
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h1 class="entry-title f-headline-ns lh-solid mt0 mb4">', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
@@ -23,15 +22,15 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				secretmagazine_posted_on();
 				secretmagazine_posted_by();
+				secretmagazine_posted_on();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 
-	<div class="entry-content">
+	<div class="entry-content mw8 center">
 		<?php
 		the_content( sprintf(
 			wp_kses(
