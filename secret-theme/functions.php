@@ -164,7 +164,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 function exclude_sticky( $query ) {
 	if ($query->is_home() && $query->is_main_query()) {
-		$query->set("ignore_sticky_posts", 1);
+		$sticky_ids = get_option('sticky_posts');
+		$query->set('ignore_sticky_posts', 1);
+		$query->set('post__not_in', $sticky_ids);
 	}
 }
 add_action('pre_get_posts', 'exclude_sticky');
