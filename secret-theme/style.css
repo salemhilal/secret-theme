@@ -1043,6 +1043,7 @@ object {
 
 .secret-post-thumbnail img {
 	display: block;
+	width: 100%;
 }
 
 .hover-bg-secret-orange:hover,
@@ -1064,7 +1065,7 @@ a:visited {
 	overflow: auto;
 }
 
-.entry-content figure {
+.entry-content img {
 	border: .125rem solid #111;
 }
 
