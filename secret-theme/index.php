@@ -29,12 +29,34 @@ get_header();
 			<div class="mw9 center ph3-ns">
 				<div class="cf ph2-ns">
 					<div class="fl w-100">
+						<?php 
+							$sticky = get_option('sticky_posts'); 
+							$sticky_query = new WP_Query([ 'p' => $sticky[0] ]);
+							while ($sticky_query->have_posts()) : $sticky_query->the_post();
+						?>
+						<div class="w-100 center pa2">
+							<div class="pb2">
+								<a href="<?php the_permalink() ?>" class="no-underline db pb2 black-90 no-visited-color lh-title tc ttu fw5 break-word bg-animate hover-bg-secret-orange hover-black">
+									<?php if (has_post_thumbnail()) : ?>
+										<div class="secret-post-thumbnail ba bw1 b--near-black mb3">	
+											<?php the_post_thumbnail(); ?>
+										</div>
+									<?php endif; ?>
+									<div class="ph2 pb2">
+										<?php the_title(); ?>
+									</div>
+								</a>
+							</div>
+						</div>
+						<?php endwhile; ?>
+
+
 						<?php while ( have_posts() ) : the_post();
 						/* the Loop™ */ ?>
 						<?php if ($wp_query->current_post % 3 === 0 && $wp_query->current_post !== 0) {
 							?></div><div class="fl w-100">
 						<?php } ?>
-						<div class="fl w-100 w-third-ns pa2">
+						<div class="fl w-third-ns pa2">
 							<div class="pb2">
 								<a href="<?php the_permalink() ?>" class="no-underline db pb2 black-90 no-visited-color lh-title tc ttu fw5 break-word bg-animate hover-bg-secret-orange hover-black">
 									<?php if (has_post_thumbnail()) : ?>
